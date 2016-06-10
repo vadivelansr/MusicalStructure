@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardElevation="@dimen/card_elevation_small"
+            card_view:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_medium">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/text_description"
+                    style="@style/text_description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hurdles"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/text_hurdles"
+                    style="@style/text_description" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/solution"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/text_solution"
+                    style="@style/text_description" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/button_action"
+            style="@style/button_action"
+            android:layout_below="@id/card_view"
+            android:layout_marginBottom="@dimen/margin_scroll_view_bottom"
+            android:background="@drawable/button_pink" />
+    </RelativeLayout>
+</ScrollView>
